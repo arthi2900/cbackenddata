@@ -9,6 +9,7 @@ import dotenv from 'dotenv';
  app.use(express.json());
 const MONGO_URL=process.env.MONGO_URL;
 const PORT=process.env.PORT;
+
 async function createConnection(){
     const client=new MongoClient(MONGO_URL);
     await client.connect();
